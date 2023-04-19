@@ -2,7 +2,7 @@ export class HomePage {
   constructor() {
     this.registerLinkSelector = ".clear.session > li:nth-of-type(1) > a";
     this.communityDropDownMenu = "nav ul.tabs li.n.on a.n";
-    this.profilIcon= ".avatar";
+    this.profilIcon = ".avatar";
   }
 
   navigateToRegistersPage() {

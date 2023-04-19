@@ -10,7 +10,7 @@ export class ForumPage {
     const expectedUrl = `https://www.indiedb.com/forum/board/${formattedForumName}`;
     const daysSinceYearStart = Math.ceil(
       (Date.now() - new Date(new Date().getFullYear(), 0, 1)) /
-        (1000 * 60 * 60 * 24)
+      (1000 * 60 * 60 * 24)
     );
 
     cy.get("table#tableforum").contains(forumName).click();
@@ -24,8 +24,7 @@ export class ForumPage {
           const postCount = parseInt(postCountText.replace(/\D+/g, ""));
           if (postCount >= daysSinceYearStart) {
             cy.log(
-              `Message count for row ${
-                i + 1
+              `Message count for row ${i + 1
               } is ${postCount} and is greater than or equal to days since year start (${daysSinceYearStart}).`
             );
 
@@ -35,8 +34,7 @@ export class ForumPage {
             }
           } else {
             cy.log(
-              `Message count for row ${
-                i + 1
+              `Message count for row ${i + 1
               } is ${postCount} and is less than days since year start (${daysSinceYearStart}).`
             );
           }

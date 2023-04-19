@@ -43,7 +43,7 @@ export class RegisterPage {
         cy.get(this.daysDropDownSelect).select(days);
         cy.get(this.termsOfUseCheckBox).click();
         cy.get(this.submitButton).should('be.visible').click();
-        cy.get(this.emailAlreadyRegisteredToolTip).should('be.visible').should('contain', 'The email entered has already');
+        cy.get(this.emailAlreadyRegisteredToolTip).should('be.visible').should('contain', 'The email entered has already').and('contain', 'been registered')
         cy.wait('@register').then((interception) => {
             expect(interception.response.statusCode).to.equal(200)
         })

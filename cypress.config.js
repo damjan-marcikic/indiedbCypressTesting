@@ -8,7 +8,6 @@ module.exports = defineConfig({
     baseUrl: "https://www.indiedb.com/",
     env: {
       invalidEmail: 'test@gmail.com',
-      email: 'qtesting000c@gmail.com',
       password: 'valid11Password',
       username: 'RandomUser',
       NODE_OPTIONS: "--unhandled-rejections=strict"
