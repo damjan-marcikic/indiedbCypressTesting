@@ -10,6 +10,7 @@ export class ProfilePage {
     this.uploadImagePreview = "img[alt='Preview image']";
     this.avatarSuccessToolTip = ".successtooltip p";
   }
+
   editProfileURL() {
     let newProfileURL = registerPage.generateRandomUsername().slice(0, 20);
     cy.intercept("POST", "/members/*/edit/").as("editProfile");
